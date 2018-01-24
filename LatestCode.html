@@ -39,7 +39,7 @@
 
 
     #wrapper {
-        width: 1350px;
+        width: 1450px;
     }
 
     #wrapper #c1 {
@@ -57,31 +57,38 @@
         right:2%;
         padding:10px;
         font-family:Arial;
-        background: gray;
+        background-image: linear-gradient(#8b9da9, #fff6e4);
+		box-shadow: inset 0 0 100px hsla(0,0%,0%,.2);
         border:1px solid black;
     }
 
 
 
     #wrapper #c3 {
-        float: right;
+        float: right;		
     }
 
 textarea {
-background-color: black;
-color: #00FF00;
+background-color: #3e4444;
+color: #87bdd8;
+font-family:Lucida Console;
+font-size:11px;
+/*font-weight: bold;*/
 width: 100%;
 height: 100%;
 }
 
 input, select {
-background-color: #000080;
-color: white;
+background-color: #3e4444;
+color: #FCB230;
+font-weight: bold;
 }
 
 HTML{
 
- background-image: linear-gradient(#8b9da9, #fff6e4);
+ /*background-image: linear-gradient(#8b9da9, #fff6e4);*/
+ background-image: linear-gradient(#033E61, #069CF7);
+  /*background-image: linear-gradient(#069CF7, #033E61);*/
  box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
  }
 
@@ -216,6 +223,13 @@ input[type=text]:focus, textarea:focus {
    width: 540px;
 }
 
+/* Style the button */
+.btn {
+   overflow: hidden;
+   display: flex; 
+   justify-content: center;
+}
+
 /* Style the buttons that are used to open the tab content */
 .tab button {
    background-color: inherit;
@@ -247,13 +261,47 @@ input[type=text]:focus, textarea:focus {
 /* Style of the textboxes */
 .jarInfobox2 {
 	width:295px;
+	
 }
 
 .jarInfobox2 {
 	width:295px;
 }
+.namespacestext
+{
+color: rgb(255, 255, 255);
+font-size: 20px;
+text-shadow: rgb(46, 46, 46) 0px 4px 5px;
+}
+.cblogo
+{
+	width:130px;
+	height:130px;
+	float:left;
+	display: inline-block;
+	margin-left: auto;
+    margin-right: auto;
 
+	/*position:fixed;
+	right:90%;
+    bottom:0px;*/
+
+}
+.cnxlogo
+{
+	width:260px;
+	height:100px;
+	float:right;
+	/*position:fixed;
+	right:61%;
+    bottom:0px;*/
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 25px;
+	margin-bottom: auto;
+}
 </style>
+
 <!--End of CSS code-->
 <!--AngularJS and JQuery implentation-->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
@@ -268,7 +316,7 @@ input[type=text]:focus, textarea:focus {
 <div id="wrapper">
     <div id="c1">
     <head><meta charset="UTF-8"></head>
-    <HEADER><b class='div_text_shadow'>Generate XSLT!</b><small><b>    Created by: Paul Rodriguez</b></small>
+    <HEADER><b class='div_text_shadow'>APS Nicaragua XSL Tool</b>
     </HEADER>
 <!--End of Header title -->
     <BODY ng-controller="Programa">
@@ -279,13 +327,14 @@ input[type=text]:focus, textarea:focus {
 		<!-- Navigation/Tabbed Bar creation -->
 		<div class="tab">
 		  <button class="tablinks" onclick="openTab(event, 'tabInfoJar')" id="defaultOpen">JAR Info</button>
-		  <button class="tablinks" onclick="openTab(event, 'tabNamespaces')">Namespaces</button>
-		  <button class="tablinks" onclick="openTab(event, 'tabHeaders')">Headers</button>
-		  <button class="tablinks" onclick="openTab(event, 'tabDefaults')">Defaults</button>
-		  <button class="tablinks" onclick="openTab(event, 'tabVariables')">Variables</button>
-		  <button class="tablinks" onclick="openTab(event, 'tabFields')">Fields</button>
+		  <button class="tablinks" disabled onclick="openTab(event, 'tabNamespaces')">Namespaces</button>
+		  <button class="tablinks" disabled onclick="openTab(event, 'tabHeaders')">Headers</button>
+		  <button class="tablinks" disabled onclick="openTab(event, 'tabDefaults')">Defaults</button>
+		  <button class="tablinks" disabled onclick="openTab(event, 'tabVariables')">Variables</button>
+		  <button class="tablinks" disabled onclick="openTab(event, 'tabFields')">Fields</button>
 		</div>
 		<!-- End of Navigation/Tabbed Bar -->
+
 		 
         <!-- Start of JAR Info tab -->
         <div id="tabInfoJar" class="tabcontent">
@@ -297,6 +346,12 @@ input[type=text]:focus, textarea:focus {
 				&nbsp;
             </DIV>
 			<hr>
+						<DIV class="btn">
+			<button class="tablinks" onclick="openTab(event, 'tabNamespaces')">Next</button>
+			</DIV>
+			<hr>
+						<img class="cblogo" src="https://www.careerbuilder.com/assets/logomark-a99bb2c789ac2091952d25260a6e47acb0be932f1238438727ffe786724ef3bb.png">
+						<img class="cnxlogo" src="http://analytics.concentrix.com/wp-content/uploads/2015/04/concxlogo_business-983x300.png">
 		</div>        
         <!-- End of JAR Info tab -->
 		
@@ -310,6 +365,32 @@ input[type=text]:focus, textarea:focus {
 				&nbsp;
             </DIV>
 			<hr>
+						<DIV class="btn">
+			<button class="tablinks" onclick="openTab(event, 'tabInfoJar')">Previous</button>			
+			<button class="tablinks" onclick="openTab(event, 'tabHeaders')">Next</button>
+			</DIV>
+			<hr>
+
+			<b class='namespacestext'>General Namespaces</b>
+<p>xmlns:xsl="http://www.w3.org/1999/XSL/Transform"</p>
+
+<b class='namespacestext'>Brassring/Bullhorn</b>
+<p>xmlns:xsl="http://www.w3.org/1999/XSL/Transform"</p>
+
+<b class='namespacestext'>Newton</b>
+<p>xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:newton="http://www.newtonsoftware.com" </p>
+
+<b class='namespacestext'>Workday</b>
+<p>xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:ns1="urn:com.workday/bsvc"</p>
+
+<b class='namespacestext'>Taleo</b>
+<p>xmlns:taleo="urn:TBERss"</p>
+	<hr>
+	<img class="cblogo" src="https://www.careerbuilder.com/assets/logomark-a99bb2c789ac2091952d25260a6e47acb0be932f1238438727ffe786724ef3bb.png">
+						<img class="cnxlogo" src="http://analytics.concentrix.com/wp-content/uploads/2015/04/concxlogo_business-983x300.png">
 		</div>        
         <!-- Start of Namespaces tab -->
 		
@@ -323,6 +404,13 @@ input[type=text]:focus, textarea:focus {
 				&nbsp;
             </DIV>
 			<hr>
+						<DIV class="btn">
+			<button class="tablinks" onclick="openTab(event, 'tabNamespaces')">Previous</button>						
+			<button class="tablinks" onclick="openTab(event, 'tabDefaults')">Next</button>
+			</DIV>
+			<hr>
+<img class="cblogo" src="https://www.careerbuilder.com/assets/logomark-a99bb2c789ac2091952d25260a6e47acb0be932f1238438727ffe786724ef3bb.png">
+						<img class="cnxlogo" src="http://analytics.concentrix.com/wp-content/uploads/2015/04/concxlogo_business-983x300.png">
 		</div>        
         <!-- End of Headers tab --> 
 		
@@ -336,6 +424,13 @@ input[type=text]:focus, textarea:focus {
 				&nbsp;
             </DIV>
 			<hr>
+						<DIV class="btn">
+			<button class="tablinks" onclick="openTab(event, 'tabHeaders')">Previous</button>
+			<button class="tablinks" onclick="openTab(event, 'tabVariables')">Next</button>
+			</DIV>
+			<hr>
+<img class="cblogo" src="https://www.careerbuilder.com/assets/logomark-a99bb2c789ac2091952d25260a6e47acb0be932f1238438727ffe786724ef3bb.png">
+						<img class="cnxlogo" src="http://analytics.concentrix.com/wp-content/uploads/2015/04/concxlogo_business-983x300.png">
 		</div>        
         <!-- End of Defaults tab --> 
 		
@@ -350,6 +445,13 @@ input[type=text]:focus, textarea:focus {
 				&nbsp;
             </DIV>
 			<hr>
+						<DIV class="btn">
+						
+			<button class="tablinks" onclick="openTab(event, 'tabDefaults')">Previous</button>
+			<button class="tablinks" onclick="openTab(event, 'tabFields')">Next</button>
+			</DIV>
+			<hr>
+
 			<p>Extra Variables</p>			
             <DIV style='display:"inblock"' ng-repeat="n in countVariables" class="formcont">
                 <input  class="jarInfoBox1" type='textbox' ng-model="countVariables[$index].string" />
@@ -357,6 +459,8 @@ input[type=text]:focus, textarea:focus {
 				&nbsp;
             </DIV>
 			<hr>
+			<img class="cblogo" src="https://www.careerbuilder.com/assets/logomark-a99bb2c789ac2091952d25260a6e47acb0be932f1238438727ffe786724ef3bb.png">
+						<img class="cnxlogo" src="http://analytics.concentrix.com/wp-content/uploads/2015/04/concxlogo_business-983x300.png">
 		</div>        
         <!-- End of Variables tab --> 
 		
@@ -370,6 +474,14 @@ input[type=text]:focus, textarea:focus {
 				&nbsp;
             </DIV>
 			<hr>
+				<DIV class="btn">
+						
+			<button class="tablinks" onclick="openTab(event, 'tabVariables')">Previous</button>
+			
+			</DIV>
+			<hr>
+			<img class="cblogo" src="https://www.careerbuilder.com/assets/logomark-a99bb2c789ac2091952d25260a6e47acb0be932f1238438727ffe786724ef3bb.png">
+						<img class="cnxlogo" src="http://analytics.concentrix.com/wp-content/uploads/2015/04/concxlogo_business-983x300.png">
 		</div>        
         <!-- End of Fields tab -->
         
@@ -456,7 +568,7 @@ input[type=text]:focus, textarea:focus {
             
             //Variables for Namespaces
             variables.jarNamespaces = [
-                {string:'Namespace',value:''},
+                {string:'Namespace',value:'xmlns:xsl="http://www.w3.org/1999/XSL/Transform"'},
             ];
             
             //Variables for Headers
@@ -492,17 +604,17 @@ input[type=text]:focus, textarea:focus {
 
             //Variables for CBFields
             variables.jarFields = [
-                {string:'CBUserJobID',value:''},
-                {string:'CBDisplayJobID',value:''},
-                {string:'CBJobTitle',value:''},
-                {string:'CBApplyURL',value:''},
-                {string:'CBPostalCode',value:''},
-                {string:'CBStreetAddress1',value:''},
-                {string:'CBCity',value:''},
-                {string:'CBState',value:''},
-                {string:'CBCountry',value:''},
-                {string:'CBEmployeeType',value:''},
-                {string:'CBDescription',value:''},
+                {string:'CBUserJobID',value:'$NormalizedID'},
+                {string:'CBDisplayJobID',value:'$NormalizedDisplayID'},
+                {string:'CBJobTitle',value:'$NormalizedJobTitle'},
+                {string:'CBApplyURL',value:'$NormalizedApplyURL'},
+                {string:'CBPostalCode',value:'$NormalizedPostalCode'},
+                {string:'CBStreetAddress1',value:'$NormalizedStreetAddress'},
+                {string:'CBCity',value:'$NormalizedCity'},
+                {string:'CBState',value:'$NormalizedState'},
+                {string:'CBCountry',value:'$NormalizedCountry'},
+                {string:'CBEmployeeType',value:'$NormalizedEmployeeType'},
+                {string:'CBDescription',value:'$NormalizedDescription'},
             ];
 
             //Getting the values from the previously declared variables
@@ -544,7 +656,9 @@ input[type=text]:focus, textarea:focus {
 
         //AngularJS functions for the main application
         var Programa = function($scope, items, $compile) {
-            var xsltemplate = "<textarea disabled='disabled'><xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>   <xsl:output method=&quot;xml&quot; encoding=&quot;UTF-8&quot; indent=&quot;yes&quot;></xsl:output> <!--\n\n{{countJarInfo.value}}\n\n</textarea>";
+		
+            var xsltemplate = "<textarea disabled='disabled'><xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>\n\t<xsl:output method=&quot;xml&quot; encoding=&quot;UTF-8&quot; indent=&quot;yes&quot; /&gt;\n&lt;!-- --&gt;\n\t<xsl:template name=&quot;create_header_node&quot;>\n\t\t<Header>\n\t\t\t<Field name=&quot;CBVendorID&quot; value=&quot;{{countHeaders[0].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBOrigin&quot; value=&quot;{{countHeaders[1].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBReplace&quot; value=&quot;{{countHeaders[2].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBReplyTo&quot; value=&quot;{{countHeaders[3].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBEmailPref&quot; value=&quot;{{countHeaders[4].value}}&quot; /&gt;\n\t\t</Header>\n\t</xsl:template>\n&lt;!-- --&gt;\n&lt;!-- --&gt;\n\t<xsl:template name=&quot;set_job_defaults&quot;>\n\t\t\t<Field name=&quot;CBAction&quot; value=&quot;{{countDefaults[0].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBProductID&quot; value=&quot;{{countDefaults[1].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBContactCompany&quot; value=&quot;{{countDefaults[2].value}}&quot; /&gt;\n\t</xsl:template>\n&lt;!-- --&gt;\n &lt;!-- \nJAR Name: {{countJarInfo[0].value}} \nMappingRequestDID:  {{countJarInfo[1].value}} \nAccountDID:  {{countJarInfo[2].value}} \nBulkposter:  {{countJarInfo[3].value}} \nVendorID:  {{countJarInfo[4].value}} \nSource URL:  {{countJarInfo[5].value}} \nWhere we are pulling from: {{countJarInfo[6].value}} \n--&gt;\n\t<xsl:template match=&quot;*&quot;>\n&lt;!-- --&gt;\n\t\t&lt;xsl:variable name=&quot;smallcase&quot; select=&quot;'abcdefghijklmnopqrstuvwxyz'&quot;/&gt;\n\t\t&lt;xsl:variable name=&quot;uppercase&quot; select=&quot;'ABCDEFGHIJKLMNOPQRSTUVWXYZ'&quot;/&gt;\n&lt;!-- --&gt;\n\t\t<Batch>\n\t\t\t<xsl:call-template name=&quot;create_header_node&quot; /&gt;\n\t\t\t<xsl:for-each select=&quot;Job&quot;&gt;\n\t\t\t\t<Job>\n\t\t\t\t\t<xsl:call-template name=&quot;set_job_defaults&quot; /&gt;\n&lt;!-- --&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedJobID&quot; select=&quot;normalize-space({{countVariables[0].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedDisplayJobID&quot; select=&quot;normalize-space({{countVariables[1].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedJobTitle&quot; select=&quot;normalize-space({{countVariables[2].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedApplyURL&quot; select=&quot;normalize-space({{countVariables[3].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedPostalCode&quot; select=&quot;normalize-space({{countVariables[4].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedStreetAddress&quot; select=&quot;normalize-space({{countVariables[5].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedCity&quot; select=&quot;normalize-space({{countVariables[6].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedState&quot; select=&quot;normalize-space({{countVariables[7].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedCountry&quot; select=&quot;normalize-space({{countVariables[8].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedEmployeeType&quot; select=&quot;normalize-space({{countVariables[9].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedDescription&quot; select=&quot;normalize-space({{countVariables[10].value}})&quot; /&gt;\n&lt;!-- --&gt;\n\n\t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBUserJobID</xsl:attribute>\n\t\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;concat('TN-',{{countFields[0].value}})&quot; /&gt;\n\t\t\t\t\t\t</xsl:attribute>\n\t\t\t\t\t</xsl:element>\n\t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBDisplayJobID</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[1].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n\t\t\t\t\t <xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBJobTitle</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[2].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n\t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBApplyURL</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[3].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n \t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBPostalCode</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[4].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n \t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBStreetAddress1</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[5].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n \t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBCity</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[6].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n\t\t\t\t\t</xsl:element>\n \t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBState</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[7].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n \t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBCountry</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[8].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n \t\t\t\t\t<xsl:call-template name=&quot;set_job_EmployeeType&quot;>\n\t\t\t\t\t\t<xsl:with-param name=&quot;ParamEmployeeType&quot; select=&quot;{{countFields[9].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:call-template>\n \t\t\t\t\t<xsl:element name=&quot;Field&quot;>\n\t\t\t\t\t<xsl:attribute name=&quot;name&quot;>CBDescription</xsl:attribute>\n\t\t\t\t\t<xsl:attribute name=&quot;value&quot;>\n\t\t\t\t\t\t<xsl:value-of select=&quot;{{countFields[10].value}}&quot; /&gt;\n\t\t\t\t\t</xsl:attribute>\n \t\t\t\t\t</xsl:element>\n\t\t\t\t</Job>\n\t\t\t</xsl:for-each>\n\t\t</Batch>\n\t</xsl:template>\n</xsl:stylesheet></textarea>";
+			
             var defaultxslfield = "\n\t<Field name=&quot;{{replacetext1}}&quot; value=&quot;{{replacetext2}}&quot;/>";
             var normalxslfield = "\t\t\t\t<xsl:element name=&quot;Field&quot;>\n<xsl:attribute name=&quot;name&quot;>{{replacetext1}}</xsl:attribute>\n<xsl:attribute name=&quot;value&quot;>\n<xsl:value-of select=&quot;{{replacetext2}}&quot;>\n</xsl:value-of>\n</xsl:attribute>\n</xsl:element>";
             var xslchuck = "&lt;lol&gt;{{amountadvancedsetup[0].value}}";
