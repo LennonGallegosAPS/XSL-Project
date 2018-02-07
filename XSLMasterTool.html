@@ -317,7 +317,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 <div id="wrapper">
     <div id="c1">
     <head><meta charset="UTF-8"></head>
-    <HEADER><b class='div_text_shadow'>Make My XSL ツ</b><br/>
+    <HEADER><b class='div_text_shadow'>Make My XSL ツ v1.0</b><br/>
 	<input type="button" id="hideshow" value="Hide/Show Code"/>
 	<input type="button" id="Help" value="Help" onclick="window.open('file://nicmgadfs01v/CareerBuilder/APS/Shared/EsteEsElCompartido/Project-XSL-NewInterface/')"/>
 	<input type="button" id="TodayTask" value="Today Tasks" onclick="window.open('file://nicmgadfs01v/CareerBuilder/APS/Shared/EsteEsElCompartido/Project-XSL-NewInterface/1-ProjectTodayUpdates.txt')"/>
@@ -348,15 +348,62 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 			<button class="tablinks" ng-disabled="myform.$invalid" onclick="openTab(event, 'tabNamespaces')">Next</button>
 			</DIV>
 			<hr>
-            <DIV style='display:"inblock"' ng-repeat="n in countJarInfo" class="formcont">
+														                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[0].string" />
+                <input name="test1" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[0].value" required />
+								  <span ng-show="myform.test1.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform.test1.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				
+				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[1].string" />
+                <input name="test2" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[1].value" required />
+								  <span ng-show="myform.test2.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform.test2.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				
+				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[2].string" />
+                <input name="test3" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[2].value" required />
+								  <span ng-show="myform.test3.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform.test3.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				
+				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[3].string" />
+                <input name="test4" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[3].value" required />
+								  <span ng-show="myform.test4.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform.test4.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				
+				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[4].string" />
+                <input name="test5" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[4].value" required />
+								  <span ng-show="myform.test5.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform.test5.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				
+				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[5].string" />
+                <input name="test6" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[5].value" required />
+								  <span ng-show="myform.test6.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform.test6.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				
+								                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[6].string" />
+                <input name="test7" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[6].value" required />
+								  <span ng-show="myform.test7.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform.test7.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				<br><br>
+<!--             <DIV style='display:"inblock"' ng-repeat="n in countJarInfo" class="formcont">
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[$index].string" />
                 <input name="test" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[$index].value"  ng-minlength="5" required />
 				&nbsp;
 				  <span ng-show="myform.test.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
-            </DIV>
-  <span ng-show="myform.test.$error.required"><strong><font color="red">Please complete all fields</font></strong></span>
-  <span ng-show="!myform.test.$error.required"><strong><font color="white">All Fields were filled correctly</font></strong></span>
+            </DIV> -->
+  <span ng-show="myform.test1.$error.required"><strong><font color="red">Please insert the JAR Name</font></strong></span><br>
+  <span ng-show="!myform.test1.$error.required"><strong><font color="white">JAR Name Complies</font></strong></span><br>
+    <span ng-show="myform.test2.$error.required"><strong><font color="red">Please insert the Account DID</font></strong></span><br>
+  <span ng-show="!myform.test2.$error.required"><strong><font color="white">Account DID Complies</font></strong></span><br>
+      <span ng-show="myform.test3.$error.required"><strong><font color="red">Please insert the JAR DID</font></strong></span><br>
+  <span ng-show="!myform.test3.$error.required"><strong><font color="white">JAR DID Complies</font></strong></span><br>
+      <span ng-show="myform.test4.$error.required"><strong><font color="red">Please insert the Bulkposter</font></strong></span><br>
+  <span ng-show="!myform.test4.$error.required"><strong><font color="white">Bulkposter Complies</font></strong></span><br>
+      <span ng-show="myform.test5.$error.required"><strong><font color="red">Please insert the Vendor ID</font></strong></span><br>
+  <span ng-show="!myform.test5.$error.required"><strong><font color="white">Vendor ID Complies</font></strong></span><br>
+      <span ng-show="myform.test6.$error.required"><strong><font color="red">Please insert the Source URL</font></strong></span><br>
+  <span ng-show="!myform.test6.$error.required"><strong><font color="white">Source URL complies</font></strong></span><br>
+      <span ng-show="myform.test7.$error.required"><strong><font color="red">Please insert the The url where we pull from</font></strong></span><br>
+  <span ng-show="!myform.test7.$error.required"><strong><font color="white">URL where we pull Complies</font></strong></span><br>
 			</form>
 			
 
@@ -424,7 +471,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
             <input class="redButton" type='button' value='Remove Default Field' ng-click="decreaseone('defaultfield')" ng-disabled="amountofstrings.length==0"/>
 			<br/><br/>
             <DIV style='display:"inblock"' ng-repeat="n in countDefaults" class="formcont">
-                <input  class="jarInfoBox1" type='textbox' ng-model="countDefaults[$index].string" />
+                <input  class="jarInfoBox1" type='textbox' disabled="disabled" ng-model="countDefaults[$index].string" />
                 <input class="jarInfoBox2" type='textbox' ng-model="countDefaults[$index].value"/>
 				&nbsp;
             </DIV>
@@ -443,17 +490,22 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 			<button class="tablinks" onclick="openTab(event, 'tabFields')">Next</button>
 			</DIV>
 			<hr>
+			<form name="myform1">
 			<p>Settings</p>
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarSettings[0].string" />
-                <input class="jarInfoBox2" type='textbox' ng-model="countJarSettings[0].value" />
+                <input name="delimit"class="jarInfoBox2" type='textbox' ng-model="countJarSettings[0].value" required />
+				
+				  <span ng-show="myform1.delimit.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
+				  <span ng-show="!myform1.delimit.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
+				
 				<br/><br/>
                 <input class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarSettings[1].string" />
-                <input class="jarInfoBox2" type='textbox' ng-model="countJarSettings[1].value" />
+                <input class="jarInfoBox2" disabled="disabled" type='textbox' ng-model="countJarSettings[1].value" />
 			<hr>
 			<p>General Variables</p>
             <DIV style='display:"inblock"' class="formcont">			
 			
-				<input type='button' value='Standard A' ng-click="addvar('standard')"/>
+				<input type='button' value='Clear Values' ng-click="addvar('standard')"/>
 				<input type='button' value='Bullhorn' ng-click="addvar('bullhorn')"/>
 				<input type='button' value='JobVite' ng-click="addvar('jobvite')"/>
 				<input type='button' value='Newton' ng-click="addvar('newton')"/>
@@ -461,7 +513,9 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 				<input type='button' value='Workday API' ng-click="addvar('workday')"/>
 				<input type='button' value='Workforce ADP' ng-click="addvar('workadp')"/>
 				<input type='button' value='Workforce NOW' ng-click="addvar('worknow')"/>
-				<input type='button' value='ClearCompany' ng-click="addvar('clearcompany')"/>			
+				<input type='button' value='ClearCompany' ng-click="addvar('clearcompany')"/>
+				<input type='button' value='ClearCompany2' ng-click="addvar('clearcompany2')"/>
+				<input type='button' value='TaleoTBE' ng-click="addvar('TaleoTBE')"/>
 				
 				<br/><br/>
 				 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[0].string" />
@@ -483,10 +537,9 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
                 <input id="GeneralBoxDescription" class="jarInfoBox2" type='textbox' ng-model="countVariables[11].value" />
 				<hr/>	
 				<p>Location Variables</p>
-				<select>
-				  <option value="1">City, State, Country</option>
-				  <option value="2">Country, State, City</option>
-				</select> <br/><br/>
+				<input type='button' value='CityStateCountry' ng-click="addvar('CityStateCountry')"/>&nbsp;&nbsp;<span>City, State, Country</span><br>
+				<input type='button' value='CountryStateCity' ng-click="addvar('CountryStateCity')"/>&nbsp;&nbsp;<span>Country, State, City</span><br>
+				<br/><br/>
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[4].string" />
                 <input id="locationboxLocation" class="jarInfoBox2" type='textbox' ng-model="countVariables[4].value" />
 				
@@ -504,8 +557,17 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[9].string" />
                 <input id="locationboxCountry" class="jarInfoBox2" type='textbox' ng-model="countVariables[9].value" />
-				
+				</form>
 				&nbsp;
+<br><br><span>US,CA,ThisOne</span><br><br>
+<span>substring-after(substring-after($Location,','),',')</span><br><br>
+<span>US,CA[<font color="red">ThisOne</font>]</span><br><br>
+<span>substring-before(substring-after($Location,'['),']')</span><br><br>
+<span>US-<font color="red">ThisOne</font>,Hurnintong</span><br><br>
+<span>substring-before(substring-after($Location,'-'),',')</span><br><br>
+<span><font color="red">ThisOne</font>-CA-Hurnintong</span><br><br>
+<span>substring-before($Location,'-')</span><br><br>
+
 				
 				
             </DIV>
@@ -641,7 +703,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
             //Variables for Settings
             variables.jarSettings = [
                 {string:'Delimiter',value:''},
-                {string:'Filter/Tag Check',value:''},
+                {string:'Filter/Tag Check',value:'FILTER IS IN DEVELOPMENT'},
             ];
             
             //Variables for Headers
@@ -682,7 +744,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 						
             //Variables for CBFields
             variables.jarFields = [
-                {string:'CBUserJobID',value:'$NormalizedJobID'},
+                {string:'CBUserJobID',value:'concat(\'CHANGEME\', $NormalizedJobID)'},
                 {string:'CBDisplayJobID',value:'$NormalizedDisplayJobID'},
                 {string:'CBJobTitle',value:'$NormalizedJobTitle'},
                 {string:'CBApplyURL',value:'$NormalizedApplyURL'},
@@ -753,7 +815,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 		
         var Programa = function($scope, items, $compile) {
 		
-            var xsltemplate = "<textarea disabled='disabled'><xsl:stylesheet {{countNameSpaces[0].value}} version=&quot;2.0&quot;>\n\t<xsl:output method=&quot;xml&quot; encoding=&quot;UTF-8&quot; indent=&quot;yes&quot; /&gt;\n&lt;!-- --&gt;\n\t<xsl:template name=&quot;create_header_node&quot;>\n\t\t<Header>\n\t\t\t<Field name=&quot;CBVendorID&quot; value=&quot;{{countHeaders[0].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBOrigin&quot; value=&quot;{{countHeaders[1].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBReplace&quot; value=&quot;{{countHeaders[2].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBReplyTo&quot; value=&quot;{{countHeaders[3].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBEmailPref&quot; value=&quot;{{countHeaders[4].value}}&quot; /&gt;\n\t\t</Header>\n\t</xsl:template>\n&lt;!-- --&gt;\n&lt;!-- --&gt;\n\t<xsl:template name=&quot;set_job_defaults&quot;>\t{{addfield('default')}}\n\t</xsl:template>\n&lt;!-- --&gt;\n &lt;!-- \nJAR Name: {{countJarInfo[0].value}} \nMappingRequestDID: {{countJarInfo[2].value}} \nAccountDID:{{countJarInfo[1].value}} \nBulkposter: {{countJarInfo[3].value}} \nVendorID: {{countJarInfo[4].value}} \nSource URL: {{countJarInfo[5].value}} \nWhere we are pulling from: {{countJarInfo[6].value}} \n--&gt;\n\t<xsl:template match=&quot;*&quot;>\n&lt;!-- --&gt;\n\t\t&lt;xsl:variable name=&quot;smallcase&quot; select=&quot;'abcdefghijklmnopqrstuvwxyz'&quot;/&gt;\n\t\t&lt;xsl:variable name=&quot;uppercase&quot; select=&quot;'ABCDEFGHIJKLMNOPQRSTUVWXYZ'&quot;/&gt;\n&lt;!-- --&gt;\n\t\t<Batch>\n\t\t\t<xsl:call-template name=&quot;create_header_node&quot; /&gt;\n\t\t\t<xsl:for-each select=&quot;{{countJarSettings[0].value}}&quot;&gt;\n\t\t\t\t<Job>\n\t\t\t\t\t<xsl:call-template name=&quot;set_job_defaults&quot; /&gt;\n&lt;!-- --&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedJobID&quot; select=&quot;normalize-space({{countVariables[0].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedDisplayJobID&quot; select=&quot;normalize-space({{countVariables[1].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedJobTitle&quot; select=&quot;normalize-space({{countVariables[2].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedApplyURL&quot; select=&quot;normalize-space({{countVariables[3].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedLocation&quot; select=&quot;normalize-space({{countVariables[4].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedPostalCode&quot; select=&quot;normalize-space({{countVariables[5].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedStreetAddress&quot; select=&quot;normalize-space({{countVariables[6].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedCity&quot; select=&quot;normalize-space({{countVariables[7].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedState&quot; select=&quot;normalize-space({{countVariables[8].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedCountry&quot; select=&quot;normalize-space({{countVariables[9].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedEmployeeType&quot; select=&quot;normalize-space({{countVariables[10].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedDescription&quot; select=&quot;normalize-space({{countVariables[11].value}})&quot; /&gt;\n{{addfield('extraVariables')}}\n{{addfield('newfield')}}\t\t\t\t\t\n\t\t\t\t</Job>\n\t\t\t</xsl:for-each>\n\t\t</Batch>\n\t</xsl:template>\n</xsl:stylesheet></textarea>";
+            var xsltemplate = "<textarea disabled='disabled'><xsl:stylesheet {{countNameSpaces[0].value}} version=&quot;2.0&quot;>\n\t<xsl:output method=&quot;xml&quot; encoding=&quot;UTF-8&quot; indent=&quot;yes&quot; /&gt;\n&lt;!-- --&gt;\n\t<xsl:template name=&quot;create_header_node&quot;>\n\t\t<Header>\n\t\t\t<Field name=&quot;CBVendorID&quot; value=&quot;{{countHeaders[0].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBOrigin&quot; value=&quot;{{countHeaders[1].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBReplace&quot; value=&quot;{{countHeaders[2].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBReplyTo&quot; value=&quot;{{countHeaders[3].value}}&quot; /&gt;\n\t\t\t<Field name=&quot;CBEmailPref&quot; value=&quot;{{countHeaders[4].value}}&quot; /&gt;\n\t\t</Header>\n\t</xsl:template>\n&lt;!-- --&gt;\n&lt;!-- --&gt;\n\t<xsl:template name=&quot;set_job_defaults&quot;>\t{{addfield('default')}}\n\t</xsl:template>\n&lt;!-- --&gt;\n &lt;!-- \nJAR Name: {{countJarInfo[0].value}} \nMappingRequestDID: {{countJarInfo[2].value}} \nAccountDID:{{countJarInfo[1].value}} \nBulkposter: {{countJarInfo[3].value}} \nVendorID: {{countJarInfo[4].value}} \nSource URL: {{countJarInfo[5].value}} \nWhere we are pulling from: {{countJarInfo[6].value}} \n--&gt;\n\t<xsl:template match=&quot;*&quot;>\n&lt;!-- --&gt;\n\t\t&lt;xsl:variable name=&quot;smallcase&quot; select=&quot;'abcdefghijklmnopqrstuvwxyz'&quot;/&gt;\n\t\t&lt;xsl:variable name=&quot;uppercase&quot; select=&quot;'ABCDEFGHIJKLMNOPQRSTUVWXYZ'&quot;/&gt;\n&lt;!-- --&gt;\n\t\t<Batch>\n\t\t\t<xsl:call-template name=&quot;create_header_node&quot; /&gt;\n\t\t\t<xsl:for-each select=&quot;{{countJarSettings[0].value}}&quot;&gt;\n&lt;!-- <xsl:variable name=&quot;StatusTag&quot; select=&quot;translate(CHANGEME, $smallcase, $uppercase)&quot;/&gt;\n<xsl:variable name=&quot;TagFilter&quot;>\n<xsl:choose>\n<xsl:when test=&quot;contains($StatusTag, '#CB')&quot;>PostJob</xsl:when>\n<xsl:otherwise>FailJob</xsl:otherwise>\n</xsl:choose>\n</xsl:variable>--&gt;\n&lt;!-- Remove this comment if you need a filter\n<xsl:if test=&quot;contains($TagFilter,'PostJob')&quot;>\n--&gt;\n\t\t\t\t<Job>\n\t\t\t\t\t<xsl:call-template name=&quot;set_job_defaults&quot; /&gt;\n&lt;!-- --&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedJobID&quot; select=&quot;normalize-space({{countVariables[0].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedDisplayJobID&quot; select=&quot;normalize-space({{countVariables[1].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedJobTitle&quot; select=&quot;normalize-space({{countVariables[2].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedApplyURL&quot; select=&quot;normalize-space({{countVariables[3].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedLocation&quot; select=&quot;normalize-space({{countVariables[4].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedPostalCode&quot; select=&quot;normalize-space({{countVariables[5].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedStreetAddress&quot; select=&quot;normalize-space({{countVariables[6].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedCity&quot; select=&quot;normalize-space({{countVariables[7].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedState&quot; select=&quot;normalize-space({{countVariables[8].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedCountry&quot; select=&quot;normalize-space({{countVariables[9].value}})&quot;/&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedEmployeeType&quot; select=&quot;normalize-space({{countVariables[10].value}})&quot; /&gt;\n\t\t\t\t\t<xsl:variable name=&quot;NormalizedDescription&quot; select=&quot;normalize-space({{countVariables[11].value}})&quot; /&gt;\n{{addfield('extraVariables')}}\n{{addfield('newfield')}}\t\t\t\t\t\n&lt;!-- \n<xsl:call-template name=&quot;set_job_Category&quot;>\n<xsl:with-param name=&quot;ParamTitle&quot; select=&quot;$NormalizedJobTitle&quot; /&gt;\n</xsl:call-template>\n --&gt;\n&lt;!--\n<xsl:call-template name=&quot;set_job_EmployeeType&quot;>\n<xsl:with-param name=&quot;ParamEmployeeType&quot; select=&quot;$NormalizedEmployeeType&quot; /&gt;\n</xsl:call-template>\n--&gt;\n\t\t\t\t</Job>\n\t\t\t&lt;!-- Remove this comment if you need a filter \n</xsl:if>\n--&gt;\n</xsl:for-each>\n\t\t</Batch>\n\t</xsl:template>\n<xsl:template name=&quot;set_job_EmployeeType&quot;><xsl:param name=&quot;ParamEmployeeType&quot; /><xsl:element name=&quot;Field&quot;><xsl:attribute name=&quot;name&quot;>CBEmployeeType</xsl:attribute><xsl:attribute name=&quot;value&quot;><xsl:choose><xsl:when test=&quot;contains($ParamEmployeeType,'Part')&quot;>JTPT</xsl:when><xsl:when test=&quot;contains($ParamEmployeeType,'Diem')&quot;>JTPD</xsl:when><xsl:when test=&quot;contains($ParamEmployeeType,'Intern')&quot;>JTIN</xsl:when><xsl:when test=&quot;contains($ParamEmployeeType,'Seasonal')&quot;>JTSE</xsl:when><xsl:when test=&quot;contains($ParamEmployeeType,'Temp')&quot;>JTSE</xsl:when><xsl:when test=&quot;contains($ParamEmployeeType,'Contract')&quot;>JTCT</xsl:when><xsl:when test=&quot;contains($ParamEmployeeType,'Full')&quot;>JTFT</xsl:when><xsl:otherwise>JTFT</xsl:otherwise></xsl:choose></xsl:attribute></xsl:element></xsl:template><xsl:template name=&quot;set_job_Category&quot;>\n<xsl:param name=&quot;ParamTitle&quot; />\n<xsl:element name=&quot;Field&quot;>\n<xsl:attribute name=&quot;name&quot;>CBJobTypeCode</xsl:attribute>\n<xsl:attribute name=&quot;value&quot;>\n<xsl:choose>\n<xsl:when test=&quot;contains($ParamTitle, 'Admin')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Finance')&quot;>JN005</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Research')&quot;>JN026</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Legal')&quot;>JN030</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Technician')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Quality')&quot;>JN025</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Accounting')&quot;>JN001</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Manager')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Customer Service')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Sales')&quot;>JN011</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Facilities')&quot;>JN017</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Business')&quot;>JN006</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Accounting')&quot;>JN001</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Admin')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Clerical')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Admin - Clerical')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Automotive')&quot;>JN054</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Banking')&quot;>JN038</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Biotech')&quot;>JN053</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Business Development')&quot;>JN019</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Business Opportunity')&quot;>JN059</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Construction')&quot;>JN043</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Consultant')&quot;>JN020</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Customer Service')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Design')&quot;>JN021</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Shipping')&quot;>JN027</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Distribution')&quot;>JN027</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Distribution - Shipping')&quot;>JN027</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Education')&quot;>JN031</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Engineering')&quot;>JN004</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Entry Level')&quot;>JN022</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Executive')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Facilities')&quot;>JN017</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Finance')&quot;>JN005</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Franchise')&quot;>JN060</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'General Business')&quot;>JN006</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'General Labor')&quot;>JN051</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Government')&quot;>JN046</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Government - Federal')&quot;>JN070</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Grocery')&quot;>JN055</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Health Care')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Hospitality - Hotel')&quot;>JN040</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Human Resources')&quot;>JN007</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Information Technology')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Installation - Maint - Repair')&quot;>JN056</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Inventory')&quot;>JN015</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Legal')&quot;>JN030</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Legal Admin')&quot;>JN041</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Management')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Manufacturing')&quot;>JN029</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Marketing')&quot;>JN009</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Media')&quot;>JN047</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Journalism')&quot;>JN047</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Newspaper')&quot;>JN047</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Journalism - Newspaper')&quot;>JN047</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Media - Journalism - Newspaper')&quot;>JN047</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Nonprofit - Social Services')&quot;>JN058</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Nurse')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Other')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Pharmaceutical')&quot;>JN049</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Professional Services')&quot;>JN024</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Purchasing - Procurement')&quot;>JN016</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'QA')&quot;>JN025</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Quality Manager')&quot;>JN025</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'QA - Quality Control')&quot;>JN025</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Real Estate')&quot;>JN057</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Research')&quot;>JN026</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Restaurant - Food Service')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Retail')&quot;>JN033</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Sales')&quot;>JN011</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Science')&quot;>JN012</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Skilled Labor - Trades')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Strategy')&quot;>JN028</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Planning')&quot;>JN028</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Strategy - Planning')&quot;>JN028</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Supply Chain')&quot;>JN014</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Telecommunications')&quot;>JN048</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Training')&quot;>JN032</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Transportation')&quot;>JN044</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Veterinary Services')&quot;>JN069</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Warehouse')&quot;>JN045</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Administrator')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Electrician')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'HealthCare')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Insurance')&quot;>JN034</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Professional Service')&quot;>JN024</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Driver')&quot;>JN044</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Engineer')&quot;>JN004</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Specialist')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Manager')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Technician')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Plumbing')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Installer')&quot;>JN056</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Superintendent')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Mechanic')&quot;>JN004</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Operator')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Carpenter')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Plumbing,Technician')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Foreman')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Programmer')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Laborer')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Assistant')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Cashier')&quot;>JN038</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Teacher')&quot;>JN031</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Lead')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'System Analyst')&quot;>JN004</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Maintenance')&quot;>JN056</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Painter')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Safety And Health')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Bartender')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Craftsman')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Financial')&quot;>JN005</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Administrative')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Electrical ')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Call Center')&quot;>JN022</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Data Entry')&quot;>JN022</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Production')&quot;>JN045</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Machine')&quot;>JN051</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Lawncare')&quot;>JN051</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'dishwasher')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Designer')&quot;>JN021</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Clinical')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Medical')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Developer')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Dev')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Auditor')&quot;>JN001</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Quality')&quot;>JN025</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Clinical Quality')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Medication Aide')&quot;>NN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Care Attendant')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Cook')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Receptionist')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Aide')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Dining Services')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Director')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Health Aide')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Personal Care Aide')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Business')&quot;>JN019</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Diet Aide')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Activities Aide')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'accountant')&quot;>JN001</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Resident Aide')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'RN')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'chef')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Hospice Aide')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Therapist')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Plumber')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Tech')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Assisted Living ')&quot;>JN018</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Nursing Asst')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Billing Analyst')&quot;>JN001</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Care')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Observer')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Accounts Representative')&quot;>JN001</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Practical Nu')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Hospice Care')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Transporter')&quot;>JN044</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Expo')&quot;>JN024</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Host')&quot;>JN024</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Hostesses')&quot;>JN024</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Bussers')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Line Cooks')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Servers')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Kitchen Supervisor')&quot;>JN035</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Human Resource')&quot;>JN007</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Operations')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Courier')&quot;>JN044</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Technical Support')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Product Manager')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'UX Designer')&quot;>JN028</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Security')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Product')&quot;>JN028</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Software')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Compliance')&quot;>JN025</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Application Security Program Manager')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Trader')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Project Manager')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Network')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'System Test')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Data Center')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Automation Test Engineer')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'System')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'DevOps')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Toll Operations')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Manufacturing and Operations')&quot;>JN029</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Administrative and Support')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Hospitality')&quot;>JN040</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Clinical Liaison')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Specialty Intake Coordinator')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Services Representative Intake')&quot;>JN023 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Enteral Technician Lead Intake')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Business Analyst')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'IT Technician')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Rehab Technician')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Service Lead')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Compounding Pharmacy Technician Part - Time')&quot;>JN049</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Infusion RN Per Diem')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Pharmacy Technician Clinical Support')&quot;>JN049</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Infusion RN Full Time')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Infusion RN Part Time')&quot;>JN050 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Evening Pediatric Infusion RN')&quot;>JN050</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Pharmacy Technician  Clinical Support')&quot;>JN049 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Pharmacist Per Diem')&quot;>JN049</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Temporary Senior Financial Analyst')&quot;>JN005</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Warehouse Coordinator')&quot;>JN045</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Clinical Support Technician')&quot;>JN049</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Infusion Reimbursement Specialist')&quot;>JN005</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Customer Service Representative (Intake)')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'SQL DBA / BI Developer')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Services Professional')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Part - time Clinical Registered Dietitian')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'IT Senior Systems Engineer')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Service Specialist')&quot;>JN003 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Customer Service -  Nutrition')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Development Operations / Application Support')&quot;>JN008 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Clinical Registered Dietitian')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Service Associate')&quot;>JN003 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Dispatcher')&quot;>JN027</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Per Diem Patient Service Associate')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Reimbursement Specialist')&quot;>JN005</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Learning and Development Manager')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Distribution Supervisor')&quot;>JN027</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Respiratory Care Coordinator')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Patient Sevice Associate')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Temporary Patient Service Associate')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Part Time Respiratory Therapist')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Customer Care Compliance Specialist')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Distribution Assistant')&quot;>JN027</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Respiratory Therapist')&quot;>JN023 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Rehab Specialist')&quot;>JN003 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Per Diem Respiratory Therapist')&quot;>JN023</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Revenue Support Representative')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Medical Records Coordinator')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Respiratory Therapist Per Diem')&quot;>JN023 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Customer Service Technician')&quot;>JN003 </xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'FirestoneBuildingProducts')&quot;>JN043</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Accounting/Finance')&quot;>JN001</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Administrative/Clerical')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Architecture and Engineering')&quot;>JN021</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Automotive Technician')&quot;>JN054</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Building and Grounds Cleaning and Maintenance')&quot;>JN017</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Co-Op')&quot;>JN054</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Corporate')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Customer Service/Support')&quot;>JN003</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Distribution-Shipping')&quot;>JN027</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Engineering')&quot;>JN004</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Finance')&quot;>JN005</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Human Resources')&quot;>JN007</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Information Technology')&quot;>JN008</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Internship')&quot;>JN054</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Legal')&quot;>JN030</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Legal Administration')&quot;>JN041</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Management')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Manufacturing')&quot;>JN029</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Marketing')&quot;>JN009</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Mining')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Office and Administrative Support')&quot;>JN002</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Other')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Plant Hourly')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Plant Salary')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Plant Maintenance')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Production')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Public Relations')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Purchasing')&quot;>JN016</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Purchasing-Procurement')&quot;>JN016</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Real Estate')&quot;>JN057</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Research')&quot;>JN026</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Retail Sales')&quot;>JN033</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Retread')&quot;>JN013</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Sales')&quot;>JN011</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Store Management')&quot;>JN037</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Supply Chain')&quot;>JN014</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Training')&quot;>JN032</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Travel')&quot;>JN010</xsl:when>\n<xsl:when test=&quot;contains($ParamTitle, 'Warehouse')&quot;>JN045</xsl:when>\n<xsl:otherwise>JN010</xsl:otherwise>\n</xsl:choose>\n</xsl:attribute>\n</xsl:element>\n</xsl:template>\n</xsl:stylesheet></textarea>";
 			
             var defaultxslfield = "\n<Field name=&quot;{{replacetext1}}&quot; value=&quot;{{replacetext2}}&quot;/>";
 						
@@ -829,34 +891,242 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
             }
             };
 			
-			//FIELD HERE
-			    //{string:'NormalizedID',value:''},              0
-                //{string:'NormalizedDisplayID',value:''},       1
-                //{string:'NormalizedJobTitle',value:''},        2
-                //{string:'NormalizedApplyURL',value:''},        3
-                //{string:'NormalizedLocation',value:''},        4
-                //{string:'NormalizedPostalCode',value:''},      5
-                //{string:'NormalizedStreetAddress',value:''},   6
-                //{string:'NormalizedCity',value:''},            7
-                //{string:'NormalizedState',value:''},           8
-                //{string:'NormalizedCountry',value:''},         9
-                //{string:'NormalizedEmployeeType',value:''},    10
-                //{string:'NormalizedDescription',value:''},     11
-			
-			
             $scope.addvar = function(param) {
             switch(param) {
             case 'standard':
+				//Delimiter
+				items.jarSettings[0].value = "";
+				//General Variables
+                items.jarVariables[0].value = "";
+                items.jarVariables[1].value = "";
+                items.jarVariables[2].value = "";
+                items.jarVariables[3].value = "";
+                items.jarVariables[10].value = "";
+                items.jarVariables[11].value = "";
+				//Location Variables
+                items.jarVariables[4].value = "";
+                items.jarVariables[5].value = "";
+                items.jarVariables[6].value = "";
+                items.jarVariables[7].value = "";
+                items.jarVariables[8].value = "";
+                items.jarVariables[9].value = "";
                 break;	
 				
             case 'bullhorn':
+				//Delimiter
+				items.jarSettings[0].value = "root-node";
+				//General Variables
                 items.jarVariables[0].value = "id";
                 items.jarVariables[1].value = "id";
                 items.jarVariables[2].value = "title";
                 items.jarVariables[3].value = "ApplyURL";
                 items.jarVariables[10].value = "employmentType";
                 items.jarVariables[11].value = "Description";
-                break;				
+				//Location Variables
+                items.jarVariables[4].value = "CHANGEME";
+                items.jarVariables[5].value = "address/zip";
+                items.jarVariables[6].value = "address/address1";
+                items.jarVariables[7].value = "address/city";
+                items.jarVariables[8].value = "address/state";
+                items.jarVariables[9].value = "address/country";
+                break;		
+				
+            case 'jobvite':
+				//Delimiter
+				items.jarSettings[0].value = "job";
+				//General Variables
+                items.jarVariables[0].value = "id";
+                items.jarVariables[1].value = "id";
+                items.jarVariables[2].value = "title";
+                items.jarVariables[3].value = "detail-url";
+                items.jarVariables[10].value = "jobtype";
+                items.jarVariables[11].value = "description";
+				//Location Variables
+                items.jarVariables[4].value = "location";
+                items.jarVariables[5].value = "CHANGEME";
+                items.jarVariables[6].value = "CHANGEME";
+                items.jarVariables[7].value = "substring-before(location,',')";
+                items.jarVariables[8].value = "substring-before(substring-after(location,','),',')";
+                items.jarVariables[9].value = "substring-after(substring-after(location,','),',')";
+				//CB Fields
+				items.jarFields[3].value = "concat($NormalizedApplyURL, \'&amp;s=Careerbuilder\')";
+                break;	
+				
+            case 'newton':
+				//Delimiter
+				items.jarSettings[0].value = "atom:entry";
+				//General Variables
+                items.jarVariables[0].value = "newton:jobId";
+                items.jarVariables[1].value = "newton:jobId";
+                items.jarVariables[2].value = "atom:title";
+                items.jarVariables[3].value = "atom:link/@href";
+                items.jarVariables[10].value = "EmployeeType";
+                items.jarVariables[11].value = "atom:summary";
+				//Location Variables
+                items.jarVariables[4].value = "CHANGEME";
+                items.jarVariables[5].value = "LOCATIONZIP";
+                items.jarVariables[6].value = "LOCATIONSTREET";
+                items.jarVariables[7].value = "newton:location";
+                items.jarVariables[8].value = "newton:state";
+                items.jarVariables[9].value = "newton:country";
+				//CB Fields
+				items.jarFields[3].value = "concat($NormalizedApplyURL, \'&amp;source=CareerBuilder\')";
+                break;	
+				
+            case 'recadp':
+				//Delimiter
+				items.jarSettings[0].value = "JOB";
+				//General Variables
+                items.jarVariables[0].value = "REQNUMBER";
+                items.jarVariables[1].value = "REQNUMBER";
+                items.jarVariables[2].value = "JOBTITLE";
+                items.jarVariables[3].value = "JOBLINK";
+                items.jarVariables[10].value = "FULLTIME";
+                items.jarVariables[11].value = "JOBBODY";
+				//Location Variables
+                items.jarVariables[4].value = "CHANGEME";
+                items.jarVariables[5].value = "CHANGEME";
+                items.jarVariables[6].value = "CHANGEME";
+                items.jarVariables[7].value = "LOCATIONCITY";
+                items.jarVariables[8].value = "LOCATIONSTATE";
+                items.jarVariables[9].value = "LOCATIONCOUNTRY";
+                break;		
+				
+            case 'workday':
+				//Delimiter
+				items.jarSettings[0].value = "cbworkday[ns1:Job_Posting_Site_Reference/ns1:ID[@ns1:type='Job_Posting_Site_ID']='CHANGEME']";
+				//General Variables
+                items.jarVariables[0].value = "substring-after(ns1:Job_Posting_ID,'REQ')";
+                items.jarVariables[1].value = "substring-after(ns1:Job_Posting_ID,'REQ')";
+                items.jarVariables[2].value = "ns1:Job_Posting_Title";
+                items.jarVariables[3].value = "ns1:External_Job_Path";
+                items.jarVariables[10].value = "ns1:Time_Type_Reference/ns1:ID[@ns1:type='Position_Time_Type_ID']";
+                items.jarVariables[11].value = "ns1:Job_Posting_Description";
+				//Location Variables
+                items.jarVariables[4].value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
+                items.jarVariables[5].value = "CHANGEME";
+                items.jarVariables[6].value = "CHANGEME";
+                items.jarVariables[7].value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
+                items.jarVariables[8].value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
+                items.jarVariables[9].value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
+                break;		
+				
+            case 'workadp':
+				//Delimiter
+				items.jarSettings[0].value = "jobRequisitions/jobRequisition";
+				//General Variables
+                items.jarVariables[0].value = "clientRequisitionID";
+                items.jarVariables[1].value = "customFieldGroup/stringFields/stringField[1]/stringValue";
+                items.jarVariables[2].value = "requisitionTitle";
+                items.jarVariables[3].value = "concat('https://workforcenow.adp.com/jobs/apply/posting.html?client=CHANGEME&amp;jobId=',$NormalizedDisplayJobID,'&amp;lang=en_US&amp;source=CB')";
+                items.jarVariables[10].value = "workLevelCode/shortName";
+                items.jarVariables[11].value = "requisitionDescription";
+				//Location Variables
+                items.jarVariables[4].value = "requisitionLocations/requisitionLocation/nameCode/shortName";
+                items.jarVariables[5].value = "requisitionLocations/requisitionLocation[1]/address/postalCode";
+                items.jarVariables[6].value = "CHANGEME";
+                items.jarVariables[7].value = "requisitionLocations/requisitionLocation[1]/address/cityName";
+                items.jarVariables[8].value = "requisitionLocations/requisitionLocation[1]/address/countrySubdivisionLevel1/codeValue";
+                items.jarVariables[9].value = "requisitionLocations/requisitionLocation/nameCode/shortName";
+                break;	
+				
+            case 'worknow':
+				//Delimiter
+				items.jarSettings[0].value = "jobRequisitions/jobRequisition";
+				//General Variables
+                items.jarVariables[0].value = "itemID";
+                items.jarVariables[1].value = "itemID";
+                items.jarVariables[2].value = "requisitionTitle";
+                items.jarVariables[3].value = "CHANGEME";
+                items.jarVariables[10].value = "workLevelCode/shortName";
+                items.jarVariables[11].value = "requisitionDescription";
+				//Location Variables
+                items.jarVariables[4].value = "requisitionLocations/requisitionLocation/nameCode/shortName";
+                items.jarVariables[5].value = "requisitionLocations/requisitionLocation[1]/address/postalCode";
+                items.jarVariables[6].value = "CHANGEME";
+                items.jarVariables[7].value = "requisitionLocations/requisitionLocation/address/cityName";
+                items.jarVariables[8].value = "requisitionLocations/requisitionLocation/address/countrySubdivisionLevel1/codeValue";
+                items.jarVariables[9].value = "requisitionLocations/requisitionLocation/nameCode/shortName";
+                break;	
+				
+            case 'clearcompany':
+				//Delimiter
+				items.jarSettings[0].value = "job";
+				//General Variables
+                items.jarVariables[0].value = "numeric_id";
+                items.jarVariables[1].value = "job_reference";
+                items.jarVariables[2].value = "job_title";
+                items.jarVariables[3].value = "application_url";
+                items.jarVariables[10].value = "CHANGEME";
+                items.jarVariables[11].value = "job_description";
+				//Location Variables
+                items.jarVariables[4].value = "CHANGEME";
+                items.jarVariables[5].value = "CHANGEME";
+                items.jarVariables[6].value = "CHANGEME";
+                items.jarVariables[7].value = "job_location_city";
+                items.jarVariables[8].value = "job_location_state";
+                items.jarVariables[9].value = "job_location_country";
+				//CB Fields
+				items.jarFields[3].value = "concat($NormalizedApplyURL, \'&amp;jbsrc=-764\')";
+                break;	
+
+				case 'clearcompany2':
+				//Delimiter
+				items.jarSettings[0].value = "/jobs/job";
+				//General Variables
+                items.jarVariables[0].value = "id"; //JobID
+                items.jarVariables[1].value = "id"; //DisplayJobID
+                items.jarVariables[2].value = "PositionTitle"; //JobTitle
+                items.jarVariables[3].value = "LegacyCareersUrl"; //ApplyURL
+                items.jarVariables[10].value = "CHANGEME"; // EmployeeType
+                items.jarVariables[11].value = "Description"; //Job Description
+				//Location Variables
+                items.jarVariables[4].value = "CHANGEME"; //Location
+                items.jarVariables[5].value = "PostalCode";  //PostalCode
+                items.jarVariables[6].value = "CHANGEME"; //StreetAddress
+                items.jarVariables[7].value = "City"; //City
+                items.jarVariables[8].value = "CountrySubdivisionName"; //State
+                items.jarVariables[9].value = "CountryCode"; //Country
+				//CB Fields
+				items.jarFields[3].value = "concat($NormalizedApplyURL, \'&amp;jbsrc=-764\')";
+                break;	
+				
+			case 'TaleoTBE':
+				//Delimiter
+				items.jarSettings[0].value = "channel/item";
+				//General Variables
+                items.jarVariables[0].value = "taleo:reqId";
+                items.jarVariables[1].value = "taleo:reqId";
+                items.jarVariables[2].value = "title";
+                items.jarVariables[3].value = "link";
+                items.jarVariables[10].value = "CHANGEME";
+                items.jarVariables[11].value = "taleo:html-description";
+				//Location Variables
+                items.jarVariables[4].value = "taleo:location";
+                items.jarVariables[5].value = "CHANGEME";
+                items.jarVariables[6].value = "CHANGEME";
+                items.jarVariables[7].value = "taleo:locationCity";
+                items.jarVariables[8].value = "taleo:locationState";
+                items.jarVariables[9].value = "taleo:locationCountry";
+				//CB Fields
+				items.jarFields[3].value = "concat($NormalizedApplyURL, \'&amp;source=CareerBuilder\')";
+                break;	
+				
+            case 'CityStateCountry':
+				//Location Variables
+                items.jarVariables[4].value = "CHANGEME";
+                items.jarVariables[7].value = "substring-before($NormalizedLocation,',')";
+                items.jarVariables[8].value = "substring-before(substring-after($NormalizedLocation,','),',')";
+                items.jarVariables[9].value = "substring-after(substring-after($NormalizedLocation,','),',')";
+                break;
+
+            case 'CountryStateCity':
+				//Location Variables
+                items.jarVariables[4].value = "CHANGEME";
+                items.jarVariables[7].value = "substring-after(substring-after($NormalizedLocation,','),',')";
+                items.jarVariables[8].value = "substring-before(substring-after($NormalizedLocation,','),',')";
+                items.jarVariables[9].value = "substring-before($NormalizedLocation,',')";
+                break;					
             }
             };
 
@@ -1027,215 +1297,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 	
 	<!-- END OF RIGHT NAVIGATION/TABBED BAR CODE -->	
 								
-				
-	function setNamespace(){
-    // find the dropdown
-    var ddl = document.getElementById("namespace");
-    // find the selected option
-    var selectedOption = ddl.options[ddl.selectedIndex];
-    // find the attribute value
-    var mailValue = selectedOption.getAttribute("data-mail");
-    // find the textbox
-    var textBox = document.getElementById("namespacebox");
 
-    // set the textbox value
-    if(mailValue=="1"){
-        textBox.value = "xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;";
-		countNameSpaces[2].value="xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;";
-    }
-    else if(mailValue=="2"){
-        textBox.value = "xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;";
-		countNameSpaces[2].value="xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;";
-    }   
-    else if(mailValue=="3"){
-        textBox.value = "xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; &amp;#10; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; &amp;#10; xmlns:newton=&quot;http://www.newtonsoftware.com&quot; &amp;#10;";
-		countNameSpaces[2].value="xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; &amp;#10; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; &amp;#10; xmlns:newton=&quot;http://www.newtonsoftware.com&quot; &amp;#10;";
-    }   
-    else if(mailValue=="4"){
-        textBox.value = "xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; &amp;#10; xmlns:ns1=&quot;urn:com.workday/bsvc&quot;";
-		countNameSpaces[2].value="xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; &amp;#10; xmlns:ns1=&quot;urn:com.workday/bsvc&quot;";
-    }   
-    else if(mailValue=="5"){
-        textBox.value = "xmlns:taleo=&quot;urn:TBERss&quot;";
-		countNameSpaces[2].value="xmlns:taleo=&quot;urn:TBERss&quot;";
-    }   
-}
-
-
-function setLocation(){
-    // find the dropdown
-    var ddl = document.getElementById("locationselect");
-    // find the selected option
-    var selectedOption = ddl.options[ddl.selectedIndex];
-    // find the attribute value
-    var mailValue = selectedOption.getAttribute("data-mail");
-	
-    // find the textbox
-	
-	//General Variables
-	var TextBoxDelimiter = document.getElementById("GeneralBoxDelimiter");
-    var TextBoxID = document.getElementById("GeneralBoxID");
-	var TextBoxDisplayID = document.getElementById("GeneralBoxDisplayID");
-	var TextBoxJobTitle= document.getElementById("GeneralBoxJobTitle");
-	var TextBoxApply = document.getElementById("GeneralBoxApply");
-	var TextBoxEmployee = document.getElementById("GeneralBoxEmployee");
-	var TextBoxDescription = document.getElementById("GeneralBoxDescription");
-	
-	//Location textbox variables
-    var TextBoxLocation = document.getElementById("locationboxLocation");
-	var TextBoxPostalCode = document.getElementById("locationboxPostalCode");
-	var TextBoxStreetAddress= document.getElementById("locationboxStreetAddress");
-	var TextBoxCity = document.getElementById("locationboxCity");
-	var TextBoxState = document.getElementById("locationboxState");
-	var TextBoxCountry = document.getElementById("locationboxCountry");
-	
-    // set the textbox value
-    if(mailValue=="1"){
-		//General Variables
-        TextBoxID.value = "";
-		TextBoxDisplayID.value = "";
-		TextBoxJobTitle.value = "";
-		TextBoxApply.value = "";
-		TextBoxEmployee.value = "";
-		TextBoxDescription.value = "";
-		//Location Variables
-		TextBoxLocation.value = "";
-		TextBoxPostalCode.value = "";
-		TextBoxStreetAddress.value = "";
-		TextBoxCity.value = "";
-		TextBoxState.value = "";
-		TextBoxCountry.value = "";
-		
-    }
-    else if(mailValue=="2"){ //This is for bullhorn
-		//General Variables
-        TextBoxID.value = "id";
-		TextBoxDisplayID.value = "id";
-		TextBoxJobTitle.value = "title";
-		TextBoxApply.value = "ApplyURL";
-		TextBoxEmployee.value = "employmentType";
-		TextBoxDescription.value = "Description";
-		//Location Variables
-		TextBoxLocation.value = "CHANGEME";
-		TextBoxPostalCode.value = "address/zip";
-		TextBoxStreetAddress.value = "address/address1";
-		TextBoxCity.value = "address/city";
-		TextBoxState.value = "address/state";
-		TextBoxCountry.value = "address/country";
-    }   
-    else if(mailValue=="3"){ //This is for JobVite
-		//General Variables
-        TextBoxID.value = "id";
-		TextBoxDisplayID.value = "id";
-		TextBoxJobTitle.value = "title";
-		TextBoxApply.value = "detail-url";
-		TextBoxEmployee.value = "jobtype";
-		TextBoxDescription.value = "description";
-		//Location Variables
-		TextBoxLocation.value = "location";
-		TextBoxPostalCode.value = "CHANGEME";
-		TextBoxStreetAddress.value = "CHANGEME";
-		TextBoxCity.value = "substring-before(location,',')";
-		TextBoxState.value = "substring-before(substring-after(location,','),',')";
-		TextBoxCountry.value = "substring-after(substring-after(location,','),',')";
-    }   
-    else if(mailValue=="4"){ //This is for newton
-		//General Variables
-        TextBoxID.value = "newton:jobId";
-		TextBoxDisplayID.value = "newton:jobId";
-		TextBoxJobTitle.value = "atom:title";
-		TextBoxApply.value = "atom:link/@href";
-		TextBoxEmployee.value = "EmployeeType";
-		TextBoxDescription.value = "atom:summary";
-		//Location Variables
-		TextBoxLocation.value = "CHANGEME";
-		TextBoxPostalCode.value = "LOCATIONZIP";
-		TextBoxStreetAddress.value = "LOCATIONSTREET";
-		TextBoxCity.value = "newton:location";
-		TextBoxState.value = "newton:state";
-		TextBoxCountry.value = "newton:country";
-    }   
-    else if(mailValue=="5"){//This is for RecruitingADP
-		//General Variables
-        TextBoxID.value = "REQNUMBER";
-		TextBoxDisplayID.value = "REQNUMBER";
-		TextBoxJobTitle.value = "JOBTITLE";
-		TextBoxApply.value = "JOBLINK";
-		TextBoxEmployee.value = "FULLTIME";
-		TextBoxDescription.value = "JOBBODY";
-		//Location Variables
-		TextBoxLocation.value = "CHANGEME";
-		TextBoxPostalCode.value = "CHANGEME";
-		TextBoxStreetAddress.value = "CHANGEME";
-		TextBoxCity.value = "LOCATIONCITY";
-		TextBoxState.value = "LOCATIONSTATE";
-		TextBoxCountry.value = "LOCATIONCOUNTRY";
-    }   
-	    else if(mailValue=="6"){//This is for WorkdayAPI
-		//General Variables
-        TextBoxID.value = "substring-after(ns1:Job_Posting_ID,'REQ')";
-		TextBoxDisplayID.value = "substring-after(ns1:Job_Posting_ID,'REQ')";
-		TextBoxJobTitle.value = "ns1:Job_Posting_Title";
-		TextBoxApply.value = "ns1:External_Job_Path";
-		TextBoxEmployee.value = "ns1:Time_Type_Reference/ns1:ID[@ns1:type='Position_Time_Type_ID']";
-		TextBoxDescription.value = "ns1:Job_Posting_Description";
-		//Location Variables
-		TextBoxLocation.value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
-		TextBoxPostalCode.value = "CHANGEME";
-		TextBoxStreetAddress.value = "CHANGEME";
-		TextBoxCity.value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
-		TextBoxState.value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
-		TextBoxCountry.value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
-    }   
-	    else if(mailValue=="7"){ //This is for WorkforceADP
-		//General Variables
-        TextBoxID.value = "clientRequisitionID";
-		TextBoxDisplayID.value = "customFieldGroup/stringFields/stringField[1]/stringValue";
-		TextBoxJobTitle.value = "requisitionTitle";
-		TextBoxApply.value = "concat('https://workforcenow.adp.com/jobs/apply/posting.html?client=CHANGEME&amp;jobId=',$NormalizedDisplayJobID,'&amp;lang=en_US&amp;source=CB')";
-		TextBoxEmployee.value = "workLevelCode/shortName";
-		TextBoxDescription.value = "requisitionDescription";
-		//Location Variables
-		TextBoxLocation.value = "requisitionLocations/requisitionLocation/nameCode/shortName";
-		TextBoxPostalCode.value = "requisitionLocations/requisitionLocation[1]/address/postalCode";
-		TextBoxStreetAddress.value = "CHANGEME";
-		TextBoxCity.value = "requisitionLocations/requisitionLocation[1]/address/cityName";
-		TextBoxState.value = "requisitionLocations/requisitionLocation[1]/address/countrySubdivisionLevel1/codeValue";
-		TextBoxCountry.value = "requisitionLocations/requisitionLocation/nameCode/shortName";
-    }   
-	    else if(mailValue=="8"){ //This is for WorkforceNOW
-		//General Variables
-        TextBoxID.value = "itemID";
-		TextBoxDisplayID.value = "itemID";
-		TextBoxJobTitle.value = "requisitionTitle";
-		TextBoxApply.value = "CHANGEME";
-		TextBoxEmployee.value = "workLevelCode/shortName";
-		TextBoxDescription.value = "requisitionDescription";
-		//Location Variables
-		TextBoxLocation.value = "requisitionLocations/requisitionLocation/nameCode/shortName";
-		TextBoxPostalCode.value = "requisitionLocations/requisitionLocation[1]/address/postalCode";
-		TextBoxStreetAddress.value = "CHANGEME";
-		TextBoxCity.value = "requisitionLocations/requisitionLocation/address/cityName";
-		TextBoxState.value = "requisitionLocations/requisitionLocation/address/countrySubdivisionLevel1/codeValue";
-		TextBoxCountry.value = "requisitionLocations/requisitionLocation/nameCode/shortName";
-    }   
-		    else if(mailValue=="9"){ //This is for ClearCompany
-		//General Variables
-        TextBoxID.value = "numeric_id";
-		TextBoxDisplayID.value = "job_reference";
-		TextBoxJobTitle.value = "job_title";
-		TextBoxApply.value = "application_url";
-		TextBoxEmployee.value = "CHANGEME";
-		TextBoxDescription.value = "job_description";
-		//Location Variables
-		TextBoxLocation.value = "CHANGEME";
-		TextBoxPostalCode.value = "CHANGEME";
-		TextBoxStreetAddress.value = "CHANGEME";
-		TextBoxCity.value = "job_location_city";
-		TextBoxState.value = "job_location_state";
-		TextBoxCountry.value = "job_location_country";
-    }   
-}		
         </SCRIPT>
         <!--End of javascript code-->
     </HTML>
