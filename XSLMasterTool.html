@@ -223,6 +223,12 @@ input[type=text]:focus, textarea:focus {
    background-color: #f1f1f1;
    width: 540px;
 }
+.codeTab {
+   overflow: hidden;
+   border: 0px solid #ccc;
+   background-color: #f1f1f1;
+   width: 740px;
+}
 
 /* Style the button */
 .btn {
@@ -240,14 +246,29 @@ input[type=text]:focus, textarea:focus {
    padding: 16px 18px;
    transition: 0.3s;
 }
+.codeTab button {
+   background-color: inherit;
+   float: left;
+   border: 2px;
+   cursor: pointer;
+   padding: 10px 153.5px;
+   transition: 0.3s;
+   
+}
 
 /* Change background color of buttons on hover */
 .tab button:hover {
    background-color: #ddd;
 }
+.codeTab button:hover {
+   background-color: #ddd;
+}
 
 /* Create an active/current tablink class */
 .tab button.active {
+   background-color: #ccc;
+}
+.codeTab button.active {
    background-color: #ccc;
 }
 
@@ -301,6 +322,45 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 	margin-top: 25px;
 	margin-bottom: auto;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 </style>
 
 <!--End of CSS code-->
@@ -318,10 +378,12 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
     <div id="c1">
     <head><meta charset="UTF-8"></head>
     <HEADER><b class='div_text_shadow'>Make My XSL ツ v1.0</b><br/>
-	<input type="button" id="hideshow" value="Hide/Show Code"/>
-	<input type="button" id="Help" value="Help" onclick="window.open('file://nicmgadfs01v/CareerBuilder/APS/Shared/EsteEsElCompartido/Project-XSL-NewInterface/')"/>
-	<input type="button" id="TodayTask" value="Today Tasks" onclick="window.open('file://nicmgadfs01v/CareerBuilder/APS/Shared/EsteEsElCompartido/Project-XSL-NewInterface/1-ProjectTodayUpdates.txt')"/>
-    </HEADER>
+	<div class="tooltip"><input type="button" id="hideshow" value="Hide/Show Code"/><span class="tooltiptext">Hide Client XML/XSL Code</span></div>
+	<div class="tooltip"><input type="button" id="TodayTask" value="Today Tasks" onclick="window.open('file://nicmgadfs01v/CareerBuilder/APS/Shared/EsteEsElCompartido/Project-XSL-NewInterface/1-ProjectTodayUpdates.txt')"/><span class="tooltiptext">Updates Tracking</span></div>
+	<div class="tooltip"><input type="button" id="Formatting" value="Formatting" onclick="window.open('http://xmlbeautifier.com/')"/><span class="tooltiptext">Use this to fix the visibility </span></div>
+	<div class="tooltip"><input type="button" id="Feeds" value="Feeds" onclick="window.open('file://nicmgadfs01v/CareerBuilder/APS/Shared/EsteEsElCompartido/Project-XSL-NewInterface/XSL%20-%20Feeds%20URLS%20USE%20THIS.html')"/><span class="tooltiptext">Feeds Structure Database</span></div>
+	<div class="tooltip"><input type="button" id="Help" value="Help" onclick="window.open('file://nicmgadfs01v/CareerBuilder/APS/Shared/EsteEsElCompartido/Project-XSL-NewInterface/')"/><span class="tooltiptext">Functions/Templates/Filters/Help </span></div>
+	</HEADER>
 <!--End of Header title -->
     <BODY ng-controller="Programa">
 
@@ -349,37 +411,37 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 			</DIV>
 			<hr>
 														                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[0].string" />
-                <input name="test1" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[0].value" required />
+                <input name="test1" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[0].value" required placeholder="{{ProductPlaceHolder}}" />
 								  <span ng-show="myform.test1.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test1.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				
 				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[1].string" />
-                <input name="test2" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[1].value" required />
+                <input name="test2" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[1].value" required placeholder="{{ProductPlaceHolder}}" />
 								  <span ng-show="myform.test2.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test2.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				
 				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[2].string" />
-                <input name="test3" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[2].value" required />
+                <input name="test3" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[2].value" required placeholder="{{ProductPlaceHolder}}" />
 								  <span ng-show="myform.test3.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test3.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				
 				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[3].string" />
-                <input name="test4" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[3].value" required />
+                <input name="test4" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[3].value" required placeholder="{{ProductPlaceHolder}}" />
 								  <span ng-show="myform.test4.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test4.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				
 				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[4].string" />
-                <input name="test5" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[4].value" required />
+                <input name="test5" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[4].value" required placeholder="{{ProductPlaceHolder}}" />
 								  <span ng-show="myform.test5.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test5.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				
 				                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[5].string" />
-                <input name="test6" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[5].value" required />
+                <input name="test6" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[5].value" required placeholder="{{ProductPlaceHolder}}" />
 								  <span ng-show="myform.test6.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test6.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				
 								                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarInfo[6].string" />
-                <input name="test7" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[6].value" required />
+                <input name="test7" class="jarInfoBox2" type='textbox' ng-model="countJarInfo[6].value" required placeholder="{{ProductPlaceHolder}}" />
 								  <span ng-show="myform.test7.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test7.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				<br><br>
@@ -390,7 +452,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 				  <span ng-show="myform.test.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform.test.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
             </DIV> -->
-  <span ng-show="myform.test1.$error.required"><strong><font color="red">Please insert the JAR Name</font></strong></span><br>
+<!--   <span ng-show="myform.test1.$error.required"><strong><font color="red">Please insert the JAR Name</font></strong></span><br>
   <span ng-show="!myform.test1.$error.required"><strong><font color="white">JAR Name Complies</font></strong></span><br>
     <span ng-show="myform.test2.$error.required"><strong><font color="red">Please insert the Account DID</font></strong></span><br>
   <span ng-show="!myform.test2.$error.required"><strong><font color="white">Account DID Complies</font></strong></span><br>
@@ -403,7 +465,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
       <span ng-show="myform.test6.$error.required"><strong><font color="red">Please insert the Source URL</font></strong></span><br>
   <span ng-show="!myform.test6.$error.required"><strong><font color="white">Source URL complies</font></strong></span><br>
       <span ng-show="myform.test7.$error.required"><strong><font color="red">Please insert the The url where we pull from</font></strong></span><br>
-  <span ng-show="!myform.test7.$error.required"><strong><font color="white">URL where we pull Complies</font></strong></span><br>
+  <span ng-show="!myform.test7.$error.required"><strong><font color="white">URL where we pull Complies</font></strong></span><br> -->
 			</form>
 			
 
@@ -449,7 +511,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 			<hr>
             <DIV style='display:"inblock"' ng-repeat="n in countHeaders" class="formcont">
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countHeaders[$index].string" />
-                <input class="jarInfoBox2" type='textbox' ng-model="countHeaders[$index].value" />
+                <div class="tooltip"><input class="jarInfoBox2" type='textbox' ng-model="countHeaders[$index].value" placeholder="{{ProductPlaceHolder}}" /><span class="tooltiptext">This is Mandatory please be careful, Spaces might lead into <strong><font color="red">AutoFail</font></strong></span></div>
 				&nbsp;
             </DIV>
 			<hr>
@@ -466,13 +528,18 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 			<button class="tablinks" onclick="openTab(event, 'tabHeaders')">Previous</button>
 			<button class="tablinks" onclick="openTab(event, 'tabVariables')">Next</button>
 			</DIV>
-			<hr>	
+			<hr>
+			<ul style="list-style-type:disc">
+			<li>CareerBuilder(US) = <div class="tooltip"><strong><font color="white">JCPRI0</font></strong><span class="tooltiptext">Public Product</span></div></li>
+			<li>Internal = <div class="tooltip"><strong><font color="white">JCINT0</font></strong><span class="tooltiptext">Internal Product</span></div></li>
+			<li>Talent Network(TN) = <div class="tooltip"><strong><font color="white">JCPRV0</font></strong><span class="tooltiptext">Private Product</span></div></li>
+			</ul>
             <input class="myButton" type='button' value='Add Default field' ng-click="increaseone('defaultfield')"/>
             <input class="redButton" type='button' value='Remove Default Field' ng-click="decreaseone('defaultfield')" ng-disabled="amountofstrings.length==0"/>
 			<br/><br/>
             <DIV style='display:"inblock"' ng-repeat="n in countDefaults" class="formcont">
-                <input  class="jarInfoBox1" type='textbox' disabled="disabled" ng-model="countDefaults[$index].string" />
-                <input class="jarInfoBox2" type='textbox' ng-model="countDefaults[$index].value"/>
+                <input  class="jarInfoBox1" type='textbox' ng-model="countDefaults[$index].string" placeholder="{{ProductPlaceHolder}}"/>
+                <div class="tooltip"><input class="jarInfoBox2" type='textbox' ng-model="countDefaults[$index].value" placeholder="{{ProductPlaceHolder}}"/><span class="tooltiptext">Please double check Product, spaces might lead into <strong><font color="red">AutoFail</font></strong></span></div>
 				&nbsp;
             </DIV>
 			<hr>
@@ -493,70 +560,69 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 			<form name="myform1">
 			<p>Settings</p>
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarSettings[0].string" />
-                <input name="delimit"class="jarInfoBox2" type='textbox' ng-model="countJarSettings[0].value" required />
+                <div class="tooltip"><input name="delimit"class="jarInfoBox2" type='textbox' ng-model="countJarSettings[0].value" required placeholder="{{ProductPlaceHolder}}" /><span class="tooltiptext">Define here the node of each job</span></div>
 				
 				  <span ng-show="myform1.delimit.$error.required"><strong><font color="red">&#x274C;</font></strong></span>
 				  <span ng-show="!myform1.delimit.$error.required"><strong><font color="green">&#x2705;</font></strong></span>
 				
 				<br/><br/>
                 <input class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countJarSettings[1].string" />
-                <input class="jarInfoBox2" disabled="disabled" type='textbox' ng-model="countJarSettings[1].value" />
+                <div class="tooltip"><input class="jarInfoBox2" disabled="disabled" type='textbox' ng-model="countJarSettings[1].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Do you want to filter #CB jobs? Add filter here</span></div>
 			<hr>
 			<p>General Variables</p>
             <DIV style='display:"inblock"' class="formcont">			
-			
-				<input type='button' value='Clear Values' ng-click="addvar('standard')"/>
-				<input type='button' value='Bullhorn' ng-click="addvar('bullhorn')"/>
-				<input type='button' value='JobVite' ng-click="addvar('jobvite')"/>
-				<input type='button' value='Newton' ng-click="addvar('newton')"/>
-				<input type='button' value='Recruiting ADP' ng-click="addvar('recadp')"/>
-				<input type='button' value='Workday API' ng-click="addvar('workday')"/>
-				<input type='button' value='Workforce ADP' ng-click="addvar('workadp')"/>
-				<input type='button' value='Workforce NOW' ng-click="addvar('worknow')"/>
-				<input type='button' value='ClearCompany' ng-click="addvar('clearcompany')"/>
-				<input type='button' value='ClearCompany2' ng-click="addvar('clearcompany2')"/>
-				<input type='button' value='TaleoTBE' ng-click="addvar('TaleoTBE')"/>
-				
+				<div class="tooltip"><input type='button' value='Bullhorn' ng-click="addvar('bullhorn')"/><span class="tooltiptext">Copy Setup BullHorn</span></div>
+				<div class="tooltip"><input type='button' value='ClearCompany' ng-click="addvar('clearcompany')"/><span class="tooltiptext">Copy Setup Clear Company1</span></div>
+				<div class="tooltip"><input type='button' value='ClearCompany2' ng-click="addvar('clearcompany2')"/><span class="tooltiptext">Copy Clear Company2</span></div>
+				<div class="tooltip"><input type='button' value='JobVite' ng-click="addvar('jobvite')"/><span class="tooltiptext">Copy Setup Job Vite</span></div>
+				<div class="tooltip"><input type='button' value='Newton' ng-click="addvar('newton')"/><span class="tooltiptext">Copy Setup Newton</span></div>
+				<div class="tooltip"><input type='button' value='Recruiting ADP' ng-click="addvar('recadp')"/><span class="tooltiptext">Copy Setup Recruiting ADP</span></div>
+				<div class="tooltip"><input type='button' value='TaleoTBE' ng-click="addvar('TaleoTBE')"/><span class="tooltiptext">Copy Setup Taleo TBE</span></div>
+				<div class="tooltip"><input type='button' value='Workday API' ng-click="addvar('workday')"/><span class="tooltiptext">Copy Setup Workday</span></div>
+				<div class="tooltip"><input type='button' value='Workforce ADP' ng-click="addvar('workadp')"/><span class="tooltiptext">Copy Setup Workforce ADP</span></div>
+				<div class="tooltip"><input type='button' value='Workforce NOW' ng-click="addvar('worknow')"/><span class="tooltiptext">Copy Setup Workforce Now</span></div>
+				<br><br>
+				<div class="tooltip"><input type='button' value='Clear Values' ng-click="addvar('standard')"/><span class="tooltiptext">Use this to clear all fields</span></div>
 				<br/><br/>
 				 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[0].string" />
-                <input id="GeneralBoxID" class="jarInfoBox2" type='textbox' ng-model="countVariables[0].value" />
+                <div class="tooltip"><input id="GeneralBoxID" class="jarInfoBox2" type='textbox' ng-model="countVariables[0].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBUserJobID Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[1].string" />
-                <input  id="GeneralBoxDisplayID"class="jarInfoBox2" type='textbox' ng-model="countVariables[1].value" />
+                <div class="tooltip"><input  id="GeneralBoxDisplayID"class="jarInfoBox2" type='textbox' ng-model="countVariables[1].value"placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBDisplayJobID Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[2].string" />
-                <input id="GeneralBoxJobTitle" class="jarInfoBox2" type='textbox' ng-model="countVariables[2].value" />
+                <div class="tooltip"><input id="GeneralBoxJobTitle" class="jarInfoBox2" type='textbox' ng-model="countVariables[2].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBJobTitle Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[3].string" />
-                <input id="GeneralBoxApply" class="jarInfoBox2" type='textbox' ng-model="countVariables[3].value" />
+                <div class="tooltip"><input id="GeneralBoxApply" class="jarInfoBox2" type='textbox' ng-model="countVariables[3].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBApplyURL Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[10].string" />
-                <input id="GeneralBoxEmployee" class="jarInfoBox2" type='textbox' ng-model="countVariables[10].value" />
+                <div class="tooltip"><input id="GeneralBoxEmployee" class="jarInfoBox2" type='textbox' ng-model="countVariables[10].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBEmployeeType Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[11].string" />
-                <input id="GeneralBoxDescription" class="jarInfoBox2" type='textbox' ng-model="countVariables[11].value" />
+                <div class="tooltip"><input id="GeneralBoxDescription" class="jarInfoBox2" type='textbox' ng-model="countVariables[11].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBDescription Here</span></div>
 				<hr/>	
 				<p>Location Variables</p>
-				<input type='button' value='CityStateCountry' ng-click="addvar('CityStateCountry')"/>&nbsp;&nbsp;<span>City, State, Country</span><br>
-				<input type='button' value='CountryStateCity' ng-click="addvar('CountryStateCity')"/>&nbsp;&nbsp;<span>Country, State, City</span><br>
+				<div class="tooltip"><input type='button' value='CityStateCountry' ng-click="addvar('CityStateCountry')"/>&nbsp;&nbsp;<span>City, State, Country</span><span class="tooltiptext">Location1</span></div><br>
+				<div class="tooltip"><input type='button' value='CountryStateCity' ng-click="addvar('CountryStateCity')"/>&nbsp;&nbsp;<span>Country, State, City</span><span class="tooltiptext">Location2</span></div><br>
 				<br/><br/>
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[4].string" />
-                <input id="locationboxLocation" class="jarInfoBox2" type='textbox' ng-model="countVariables[4].value" />
+                <div class="tooltip"><input id="locationboxLocation" class="jarInfoBox2" type='textbox' ng-model="countVariables[4].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define General Location Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[5].string" />
-                <input id="locationboxPostalCode" class="jarInfoBox2" type='textbox' ng-model="countVariables[5].value" />
+               <div class="tooltip"> <input id="locationboxPostalCode" class="jarInfoBox2" type='textbox' ng-model="countVariables[5].value"placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define PostalCode Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[6].string" />
-                <input id="locationboxStreetAddress" class="jarInfoBox2" type='textbox' ng-model="countVariables[6].value" />
+                <div class="tooltip"><input id="locationboxStreetAddress" class="jarInfoBox2" type='textbox' ng-model="countVariables[6].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBStreetAddress Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[7].string" />
-                <input id="locationboxCity" class="jarInfoBox2" type='textbox' ng-model="countVariables[7].value" />
+                <div class="tooltip"><input id="locationboxCity" class="jarInfoBox2" type='textbox' ng-model="countVariables[7].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBCity Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[8].string" />
-                <input id="locationboxState" class="jarInfoBox2" type='textbox' ng-model="countVariables[8].value" />
+               <div class="tooltip"> <input id="locationboxState" class="jarInfoBox2" type='textbox' ng-model="countVariables[8].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBState Here</span></div>
 				
                 <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countVariables[9].string" />
-                <input id="locationboxCountry" class="jarInfoBox2" type='textbox' ng-model="countVariables[9].value" />
+                <div class="tooltip"><input id="locationboxCountry" class="jarInfoBox2" type='textbox' ng-model="countVariables[9].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Define CBCountry Here</span></div>
 				</form>
 				&nbsp;
 <br><br><span>US,CA,ThisOne</span><br><br>
@@ -579,8 +645,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
             <input class="redButton" type='button' value='Remove Variable' ng-click="decreaseone('extraVar')" ng-disabled="amountofstrings.length==0"/>
 			<br/><br/>
             <DIV style='display:"inblock"' ng-repeat="n in countExtraVariables" class="formcont">
-                <input  class="jarInfoBox1" type='textbox' ng-model="countExtraVariables[$index].string" />
-                <input class="jarInfoBox2" type='textbox' ng-model="countExtraVariables[$index].value" />
+                <input  class="jarInfoBox1" type='textbox' ng-model="countExtraVariables[$index].string" placeholder="{{ProductPlaceHolder}}"  />
+                <input class="jarInfoBox2" type='textbox' ng-model="countExtraVariables[$index].value" placeholder="{{ProductPlaceHolder}}"  />
 				&nbsp;
             </DIV>
 			<hr>
@@ -600,8 +666,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
             <input class="redButton" type='button' value='Remove Field' ng-click="decreaseone('xslfield')" ng-disabled="amountofstrings.length==0"/>
 			<br/><br/>
             <DIV style='display:"inblock"' ng-repeat="n in countFields" class="formcont">
-                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countFields[$index].string" />
-                <input class="jarInfoBox2" type='textbox' ng-model="countFields[$index].value" />
+                <input  class="jarInfoBox1" disabled="disabled" type='textbox' ng-model="countFields[$index].string" placeholder="{{ProductPlaceHolder}}"  />
+                <div class="tooltip"><input class="jarInfoBox2" type='textbox' ng-model="countFields[$index].value" placeholder="{{ProductPlaceHolder}}"  /><span class="tooltiptext">Please check AppendText and source code, This might be mandatory, Spaces might lead into <strong><font color="red">AutoFail</font></strong> </span></div>
 				&nbsp;
             </DIV>
 			<hr>
@@ -613,17 +679,26 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
     </BODY>
     </div>	
     <div id="cabs">
-		
-		  <button class="tablinks" onclick="open(event, 'clientXML')" id="defaultOpen">Client XML</button>
-		  <button class="tablinks" onclick="openXMLTab(event, 'codeXSL')" id="defaultOpen">XSL Code</button>
-               
+			
+		<div class="codeTab">
+		  <button class="codelinks" onclick="openXMLTab(event, 'clientXml')" id="defaultCode">Client XML</button>
+		  <button class="codelinks" onclick="openXMLTab(event, 'xslCode')">XSL Code</button>
+		</div>
+           			   
+        <div id="xslCode" class="codecontent">
 			   <DIV style='display:"inblock"'>
             <!--Template containing the textarea box -->
              <datan-string></datan-string>
              <!--End of template -->
-        </DIV>
-    </div>
-</div>
+			</div>
+		</div>
+		
+        <div id="clientXml" class="codecontent">
+			<textarea>PASTE CLIENT CODE HERE</textarea>
+		</div>
+		
+	</div>   
+
     <!--Start of Javscript and AngularJS scripts-->
     <SCRIPT>
         function formatXml(xml) {
@@ -718,8 +793,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
             //Variables for Defaults
             variables.jarDefaults = [
                 {string:'CBAction',value:'Add'},
-                {string:'CBProductID',value:'JCPRV0'},
-                {string:'CBContactCompany',value:'CHANGEME'},
+                {string:'CBProductID',value:''},
+                {string:'CBContactCompany',value:''},
             ];
 
             //Variables for XSL Variables
@@ -827,7 +902,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
             return formatXml(xsltemplate); };
 
             $("#textareaxsl").html($compile($scope.xsltemplatef())($scope));
-
+			$scope.ProductPlaceHolder = 'Please Change Me';
 			$scope.countJarInfo = items.getJarInfo();
 			$scope.countNameSpaces = items.getJarNamespaces();
 			$scope.countJarSettings = items.getJarSettings();
@@ -910,6 +985,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
                 items.jarVariables[7].value = "";
                 items.jarVariables[8].value = "";
                 items.jarVariables[9].value = "";
+				//CB Fields
+				items.jarFields[3].value = "$NormalizedApplyURL";
                 break;	
 				
             case 'bullhorn':
@@ -929,6 +1006,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
                 items.jarVariables[7].value = "address/city";
                 items.jarVariables[8].value = "address/state";
                 items.jarVariables[9].value = "address/country";
+				//CB Fields
+				items.jarFields[3].value = "$NormalizedApplyURL";
                 break;		
 				
             case 'jobvite':
@@ -990,6 +1069,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
                 items.jarVariables[7].value = "LOCATIONCITY";
                 items.jarVariables[8].value = "LOCATIONSTATE";
                 items.jarVariables[9].value = "LOCATIONCOUNTRY";
+				//CB Fields
+				items.jarFields[3].value = "$NormalizedApplyURL";
                 break;		
 				
             case 'workday':
@@ -1009,6 +1090,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
                 items.jarVariables[7].value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
                 items.jarVariables[8].value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
                 items.jarVariables[9].value = "ns1:Job_Posting_Location_Data/ns1:Primary_Location_Reference/ns1:ID[@ns1:type='Location_ID']";
+				//CB Fields
+				items.jarFields[3].value = "$NormalizedApplyURL";
                 break;		
 				
             case 'workadp':
@@ -1028,6 +1111,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
                 items.jarVariables[7].value = "requisitionLocations/requisitionLocation[1]/address/cityName";
                 items.jarVariables[8].value = "requisitionLocations/requisitionLocation[1]/address/countrySubdivisionLevel1/codeValue";
                 items.jarVariables[9].value = "requisitionLocations/requisitionLocation/nameCode/shortName";
+				//CB Fields
+				items.jarFields[3].value = "$NormalizedApplyURL";
                 break;	
 				
             case 'worknow':
@@ -1047,6 +1132,8 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
                 items.jarVariables[7].value = "requisitionLocations/requisitionLocation/address/cityName";
                 items.jarVariables[8].value = "requisitionLocations/requisitionLocation/address/countrySubdivisionLevel1/codeValue";
                 items.jarVariables[9].value = "requisitionLocations/requisitionLocation/nameCode/shortName";
+				//CB Fields
+				items.jarFields[3].value = "$NormalizedApplyURL";
                 break;	
 				
             case 'clearcompany':
@@ -1273,18 +1360,18 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 	<!-- START OF RIGHT NAVIGATION/TABBED CODE -->
 	function openXMLTab(evt, selectTab) {
     // Declare all variables
-    var i, tabcontent, tablinks;
+    var i, codecontent, codelinks;
 
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    // Get all elements with class="codecontent" and hide them
+    codecontent = document.getElementsByClassName("codecontent");
+    for (i = 0; i < codecontent.length; i++) {
+        codecontent[i].style.display = "none";
     }
 
     // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    codelinks = document.getElementsByClassName("codelinks");
+    for (i = 0; i < codelinks.length; i++) {
+        codelinks[i].className = codelinks[i].className.replace(" active", "");
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
@@ -1293,7 +1380,7 @@ text-shadow: rgb(46, 46, 46) 0px 4px 5px;
 	}
 	
 	// Get the element with id="defaultOpen" and click on it
-	document.getElementById("defaultOpen").click();
+	document.getElementById("defaultCode").click();
 	
 	<!-- END OF RIGHT NAVIGATION/TABBED BAR CODE -->	
 								
